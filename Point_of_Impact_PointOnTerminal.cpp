@@ -36,7 +36,7 @@ int main()
                 if(k==0)
                     cout<<"|";
                 if(j==n && k==m)
-                    cout<<"#  ";
+                    cout<<" @ ";
                 else
                     cout<<"   ";
                 if(k==width)
