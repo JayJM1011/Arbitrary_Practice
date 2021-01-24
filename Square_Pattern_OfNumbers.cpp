@@ -5,7 +5,7 @@ int main()
 {
     int n, x, a, b, c, d;
     int i= 0, j= 0, k= 0, l=0;
-    string str= " ";
+    string str= "  ";
     cin>>n;
     cout<<"\n";
     x=(n*2)-1;
@@ -13,7 +13,7 @@ int main()
 
     j= n/ 10;
     for(i= 0; i< j; i++)
-        str= str+ "  ";                     //For an Even Pattern
+        str= str+ " ";                     //For an Even Pattern
 
     for(i=x;i>0;i--)
     {
