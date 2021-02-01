@@ -6,7 +6,7 @@ int main()
     int No= 0, posi1= 0, posi2= 0, posi3= 0;
     float tar= 0.0, x= 0.0, y= 0.0, z= 0.0, add= 0.0;
     float a[999];
-    int i= 0, j= 0, k= 0;
+    int i= 0, j= 0, k= 0, l= 0;
     cout<<"No. of Inputs?\n";   cin>>No;            //<Inputs>
     cout<<"\nEnter your inputs\n";
     for(i= 0; i< No; i++)
@@ -16,9 +16,9 @@ int main()
     cout<<"\nEnter your target\n";  cin>>tar;       //</Inputs>
     for(i= 0; i< No; i++)
     {
-        for(int j= 0; j< No; j++)
+        for(int j= i; j< No; j++)
         {
-            for(int k= 0; k< No; k++)
+            for(int k= i; k< No; k++)
             {
                 if(i==j || i==k || j==k)
                     break;
