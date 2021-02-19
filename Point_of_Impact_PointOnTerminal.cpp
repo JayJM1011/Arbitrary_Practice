@@ -22,10 +22,10 @@ int main()
         m=x;    n=length- y+ 1;
         for(j= 0; j<=length+ 1; j++)
         {
-            for(k= 0;k< width; k++)
+            for(k= 0; k<=width+ 1; k++)
             {
                 if(j==0)
-                    cout<<" __ ";
+                    cout<<"___";
                 else
                     break;
             }
@@ -34,19 +34,19 @@ int main()
             for(k= 0; k<=width; k++)
             {
                 if(k==0)
-                    cout<<"|";
+                    cout<<"| ";
                 if(j==n && k==m)
                     cout<<" @ ";
                 else
                     cout<<"   ";
                 if(k==width)
-                    cout<<"|";
+                    cout<<" |";
             }
             cout<<"\n";
-            for(k= 0;k< width; k++)
+            for(k= 0; k<=width+ 1; k++)
             {
                 if(j==length+ 1)
-                    cout<<" __ ";
+                    cout<<"___";
                 else
                     break;
             }
@@ -55,6 +55,7 @@ int main()
         if(NoOfHits==Much-1)
             break;
         sleep(1.5);
+        system("cls");
         cout<<"\n";
 
         if(xi&&yi)
