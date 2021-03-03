@@ -5,7 +5,8 @@ int Zeller(int dd, int mm, int yy)
 {
     int F= 0;
     F= dd+ (((13* mm)- 1)/ 5);
-    return 0;
+    
+    return F% 7;
 }
 int Key_Value()
 {
