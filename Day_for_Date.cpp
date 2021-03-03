@@ -1,3 +1,5 @@
+//https://beginnersbook.com/2013/04/calculating-day-given-date/
+
 #include <iostream>
 #define cout std::cout
 #define cin std::cin
@@ -31,28 +33,25 @@ int Key_Value_M(int mm)
         case 12:
         return 6;
     }
+    return 0;
 }
 int Key_Value_Y(int yyyy)
 {
     int y= (yyyy/ 400)% 4;
-    switch (y)
-    {
-        case 0:
+    if(y==1)
         return 6;
-        case 1:
+    if(y==2)
         return 4;
-        case 2:
+    if(y==3)
         return 2;
-        case 3:
-        return 0;
-    }
+    return 0;
 }
 void Day(int No)
 {
     switch(No)
     {
         case 0:
-            cout<<"Satday";
+            cout<<"Saturday";
         break;
         case 1:
             cout<<"Sunday";
@@ -85,12 +84,12 @@ int main()
         return 0;
     }
     cout<<"\nThe Day on "<<date<<"/"<<month<<"/"<<year<<" is ";
-    int F= 0;
-    F= (year% 4)+ date;
-    F+= Key_Value_M(month);
+    int F= ((year% 100)/ 4);
+    F+= date+ Key_Value_M(month);
     if(date< 3 && year% 4 == 0)
         F-= 1;
-    F+= Key_Value_Y(year)+ (year% 100);
+    F+= Key_Value_Y(year);
+    F+= (year% 100);
     Day(F% 7);
     return 0;
 }
