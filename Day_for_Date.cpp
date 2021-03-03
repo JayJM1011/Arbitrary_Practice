@@ -3,7 +3,8 @@
 #define cin std::cin
 int Zeller(int dd, int mm, int yy)
 {
-
+    int F= 0;
+    F= dd+ (((13* mm)- 1)/ 5);
     return 0;
 }
 int Key_Value()
@@ -21,19 +22,19 @@ void Day(int No)
             cout<<"Monday";
         break;
         case 2:
-            cout<<"Monday";
+            cout<<"Tuesday";
         break;
         case 3:
-            cout<<"Monday";
+            cout<<"Wednesday";
         break;
         case 4:
-            cout<<"Monday";
+            cout<<"Thursday";
         break;
         case 5:
-            cout<<"Monday";
+            cout<<"Friday";
         break;
         case 6:
-            cout<<"Monday";
+            cout<<"Saturday";
         break;
     }
 }
@@ -43,6 +44,11 @@ int main()
     cout<<"Enter Method Choice\n1. Zeller\'s Method\n2. Key-Value Method";  cin>>choice;
     system("cls");
     cout<<"\nEnter Date, Month and Year\n"; cin>>date>>month>>year;
+    if(year< 0)
+    {
+        cout<<"ERROR1";
+        return 0;
+    }
     cout<<"\nThe Day on "<<date<<"/"<<month<<"/"<<year<<" is ";
     switch (choice)
     {
