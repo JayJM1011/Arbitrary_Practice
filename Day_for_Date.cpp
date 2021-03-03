@@ -18,10 +18,12 @@ int main()
     {
     case 1:
         /* code */
-    break;
+    return 0;
+    case 2:
+        /*code*/
+    return 0;
     default:
         cout<<"ERROR2";
-    break;
-    }
     return 0;
+    }
 }
