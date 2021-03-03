@@ -1,13 +1,18 @@
 #include <iostream>
 #define cout std::cout
 #define cin std::cin
-int Zeller()
+int Zeller(int dd, int mm, int yy)
 {
+
     return 0;
 }
 int Key_Value()
 {
     return 0;
+}
+void Day(int dd)
+{
+
 }
 int main()
 {
@@ -17,7 +22,7 @@ int main()
     switch (choice)
     {
     case 1:
-        /* code */
+        Zeller(date, month, year);
     return 0;
     case 2:
         /*code*/
