@@ -4,12 +4,14 @@
 int Zeller(int dd, int mm, int yy)
 {
     int F= 0;
-    F= dd+ (((13* mm)- 1)/ 5);
-    
+    F= dd+ (((13* mm)- 1)/ 5)+ (yy% 100)+ ((yy/ 100)/ 4)- ((yy/ 100)* 2);
+    if(F< 0)
+        return 7+ (F% 7);
     return F% 7;
 }
 int Key_Value()
 {
+    
     return 0;
 }
 void Day(int No)
